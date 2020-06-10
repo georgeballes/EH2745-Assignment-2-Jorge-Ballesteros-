@@ -26,4 +26,7 @@ Once we have created this dataset, this last one have to be splitted into 2:
 
 To finish, a knn algorithm is implemented in order to train our test set which will predict in which operating state (hihg or low load, generator or line disconnected, etc). A function that calculates the accuraccy of of the predicted results is also implemented, this last one basically takes the original dataset and compares with the test data to see if the predicted operating state mactches with the operating state in the original dataset.
 
+For the Kmeans and Knn algorithms I have got inspired from this github repository: https://github.com/python-engineer/MLfromscratch. And also from youtube videos from the same author.
+
+
 
