@@ -18,7 +18,12 @@ Secondly a data source profile is created, for this we are considering 6 cases:
   - High Load case
   - Low Load Case
   
-After creating all the data profiles we merge them in a sigle file which will become our dataset. In order to have a clearer data the voltage values and angles are normalize, doing this we will get a much clearer distinction between our 6 different cases in the dataset.
+After creating all the data profiles we merge them in a sigle file which will become our dataset. In order to have a clearer data the buses voltage values and angles, with the exception of the salck bus, are normalized. Doing this we will get a much clearer distinction between our 6 different cases in the dataset. We will use this dataset in the kmeans algorithm in order to cluster the data.
 
- 
+Once we have created this dataset, this last one have to be splitted into 2:
+- Training dataset: with the 80% of the original dataset.
+- Testing dataset: with the remainig 20% of the original dataset.
+
+To finish, a knn algorithm is implemented in order to train our test set which will predict in which operating state (hihg or low load, generator or line disconnected, etc). A function that calculates the accuraccy of of the predicted results is also implemented, this last one basically takes the original dataset and compares with the test data to see if the predicted operating state mactches with the operating state in the original dataset.
+
 
