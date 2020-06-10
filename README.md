@@ -7,3 +7,18 @@ The first step in this code is to generate the system, which is comprised of:
   - 6 Load Buses
   - 1 Slack Bus
  - Lines of 10 km length each
+
+Secondly a data source profile is created, for this we are considering 6 cases:
+- High Load: Set the P and Q for each load to a value higher than the default, and add some noise with a standard deviation of about 5-10% of the nominal values.
+- Low Load: Set the P and Q for each load to a value smaller than the default, and add some noise with a standard deviation of about 5-10% of the nominal values. 
+- Generator Disconnected: Disconnect the generator at bus 3. 
+  - High Load case
+  - Low Load Case
+- Line Disconnected: Disconnect the line between bus 5 and 6. 
+  - High Load case
+  - Low Load Case
+  
+After creating all the data profiles we merge them in a sigle file which will become our dataset. In order to have a clearer data the voltage values and angles are normalize, doing this we will get a much clearer distinction between our 6 different cases in the dataset.
+
+ 
+
